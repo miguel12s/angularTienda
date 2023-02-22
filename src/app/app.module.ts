@@ -7,11 +7,14 @@ import { MaterialModule } from './materialModule/material.module';
 import {HttpClientModule} from '@angular/common/http'
 import { productService } from './services/product.service';
 import { DescripcionComponent } from './descripcion/descripcion.component';
+import { DataServices } from './services/data.services';
+import { AgregarComponent } from './agregar/agregar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DescripcionComponent
+    DescripcionComponent,
+    AgregarComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { DescripcionComponent } from './descripcion/descripcion.component';
  
 
   
-  providers: [productService],
+  providers: [productService,DataServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
